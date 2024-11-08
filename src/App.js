@@ -9,6 +9,7 @@ function App() {
   return (
     <div className="App">
       <Pessoa foto={url} nome={nome} idade = "22" profissao="Programador"/>
+      <a HLTV href="https://www.hltv.org/"></a>
     </div>
   );
 }
