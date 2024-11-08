@@ -1,25 +1,17 @@
-import logo from './logo.svg';
 import './App.css';
+import Helloworld from './components/Helloworld.js';
+import Nome from './components/Nome.js';
+import Pessoa from './components/Pessoa.js';
 
 function App() {
+  const nome = "João"
+  const url = "https://i.pinimg.com/564x/31/58/31/31583193f57c8b2448d7d4ddb1f5122a.jpg"
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Pessoa foto={url} nome={nome} idade = "22" profissao="Programador"/>
     </div>
   );
 }
+
 
 export default App;
