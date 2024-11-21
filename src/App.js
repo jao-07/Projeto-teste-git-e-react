@@ -1,15 +1,24 @@
-import './App.css';
-import ListaRenderizada from './components/ListaRenderizada';
+import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
+import Navbar from './components/layout/Navbar';
+import Footer from './components/layout/Footer';
+import Home from './pages/Home';
+import Empresa from './pages/Empresa';
+import Contato from './pages/Contato';
+import './App.css'
 
 function App() {
-  const itens = ["adidas", "nike", "puma"]
+
   return (
-    <div className="App">
-      <h1>Renderização de listas</h1>
-      <ListaRenderizada itens={itens}/>
-      <ListaRenderizada itens={[]}/>
-    </div>
-  );
+    <Router>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/contato" element={<Contato />} />
+        <Route path="/empresa" element={<Empresa />} />
+      </Routes>
+      <Footer />
+    </Router>
+  )
 }
 
 
