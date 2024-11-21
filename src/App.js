@@ -1,14 +1,13 @@
 import './App.css';
-import Evento from './components/Evento.js'
-import Form from './components/Form.js';
+import ListaRenderizada from './components/ListaRenderizada';
 
 function App() {
+  const itens = ["adidas", "nike", "puma"]
   return (
     <div className="App">
-      <h1> Testando Evento </h1>
-      <Evento />
-      <h1>Testando Cadastro</h1>
-      <Form />
+      <h1>Renderização de listas</h1>
+      <ListaRenderizada itens={itens}/>
+      <ListaRenderizada itens={[]}/>
     </div>
   );
 }
